@@ -11,6 +11,9 @@
 #import "CBContactManager.h"
 #import "CBContactCell.h"
 #import "CBFakeContactsService.h"
+#import "CBAuthToken.h"
+#import "CBAutorizationController.h"
+#import "CBVKContactService.h"
 
 @interface CBContactsTableViewController ()
 
@@ -24,12 +27,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Contacts";
-    self.contactManager = [CBFakeContactsService new];
-    self.contacts = [self.contactManager getContacts];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[CBContactCell class] forCellReuseIdentifier:CBContactCellIdentifier];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    if (![CBAuthToken getAccessToken]) {
+        CBAutorizationController *authController = [[CBAutorizationController alloc] init];
+        [self presentViewController:authController animated:YES completion:nil];
+    }
+    else {
+        self.contactManager = [CBVKContactService new];
+        self.contactManager.authToken = [CBAuthToken getAccessToken];
+        self.contacts = [self.contactManager getContacts];
+        [self.tableView reloadData];
+    }
+    [super viewDidAppear:animated];
 }
 
 #pragma mark - Table view data source

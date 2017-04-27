@@ -11,5 +11,8 @@
 @protocol CBContactManager <NSObject>
 @required
 - (CBContactsList *)getContacts;
+@optional
+- (void)setAuthToken:(NSString *)token;
+- (NSString *)authToken;
 
 @end

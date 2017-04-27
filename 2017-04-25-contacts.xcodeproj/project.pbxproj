@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046F014A1EB25A56002F3514 /* CBAutorizationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F01491EB25A56002F3514 /* CBAutorizationController.m */; };
+		046F014E1EB25ABB002F3514 /* CBAuthToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F014D1EB25ABB002F3514 /* CBAuthToken.m */; };
+		046F01511EB26FC6002F3514 /* CBVKContactService.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F01501EB26FC6002F3514 /* CBVKContactService.m */; };
 		04F44B4A1EAFAFBE00194FE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F44B491EAFAFBE00194FE4 /* main.m */; };
 		04F44B4D1EAFAFBE00194FE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F44B4C1EAFAFBE00194FE4 /* AppDelegate.m */; };
 		04F44B551EAFAFBE00194FE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F44B541EAFAFBE00194FE4 /* Assets.xcassets */; };
@@ -20,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046F01481EB25A56002F3514 /* CBAutorizationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAutorizationController.h; sourceTree = "<group>"; };
+		046F01491EB25A56002F3514 /* CBAutorizationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAutorizationController.m; sourceTree = "<group>"; };
+		046F014C1EB25ABB002F3514 /* CBAuthToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAuthToken.h; sourceTree = "<group>"; };
+		046F014D1EB25ABB002F3514 /* CBAuthToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAuthToken.m; sourceTree = "<group>"; };
+		046F014F1EB26FC6002F3514 /* CBVKContactService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBVKContactService.h; sourceTree = "<group>"; };
+		046F01501EB26FC6002F3514 /* CBVKContactService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBVKContactService.m; sourceTree = "<group>"; };
 		04F44B451EAFAFBE00194FE4 /* 2017-04-25-contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2017-04-25-contacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F44B491EAFAFBE00194FE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04F44B4B1EAFAFBE00194FE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +63,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046F01471EB25A18002F3514 /* Autorization */ = {
+			isa = PBXGroup;
+			children = (
+				046F01481EB25A56002F3514 /* CBAutorizationController.h */,
+				046F01491EB25A56002F3514 /* CBAutorizationController.m */,
+			);
+			name = Autorization;
+			sourceTree = "<group>";
+		};
+		046F014B1EB25A94002F3514 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				046F014C1EB25ABB002F3514 /* CBAuthToken.h */,
+				046F014D1EB25ABB002F3514 /* CBAuthToken.m */,
+			);
+			name = Token;
+			sourceTree = "<group>";
+		};
+		046F01521EB26FCC002F3514 /* Fake */ = {
+			isa = PBXGroup;
+			children = (
+				04F44B7B1EAFC3C200194FE4 /* CBFakeContactsService.h */,
+				04F44B7C1EAFC3C200194FE4 /* CBFakeContactsService.m */,
+			);
+			name = Fake;
+			sourceTree = "<group>";
+		};
+		046F01531EB26FD9002F3514 /* VK */ = {
+			isa = PBXGroup;
+			children = (
+				046F014F1EB26FC6002F3514 /* CBVKContactService.h */,
+				046F01501EB26FC6002F3514 /* CBVKContactService.m */,
+			);
+			name = VK;
+			sourceTree = "<group>";
+		};
 		04F44B3C1EAFAFBE00194FE4 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +158,7 @@
 		04F44B641EAFBC7C00194FE4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				046F01471EB25A18002F3514 /* Autorization */,
 				04F44B731EAFC0C800194FE4 /* Avatar */,
 				04F44B6F1EAFBF2F00194FE4 /* Cell */,
 				04F44B631EAFBC7300194FE4 /* Table */,
@@ -124,6 +170,7 @@
 		04F44B651EAFBC8E00194FE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				046F014B1EB25A94002F3514 /* Token */,
 				04F44B791EAFC2D600194FE4 /* Service */,
 				04F44B781EAFC2C500194FE4 /* Contact */,
 				04F44B771EAFC2B600194FE4 /* List */,
@@ -171,8 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				04F44B7A1EAFC31000194FE4 /* CBContactManager.h */,
-				04F44B7B1EAFC3C200194FE4 /* CBFakeContactsService.h */,
-				04F44B7C1EAFC3C200194FE4 /* CBFakeContactsService.m */,
+				046F01531EB26FD9002F3514 /* VK */,
+				046F01521EB26FCC002F3514 /* Fake */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -250,6 +297,9 @@
 				04F44B761EAFC0E500194FE4 /* CBAvatarView.m in Sources */,
 				04F44B4D1EAFAFBE00194FE4 /* AppDelegate.m in Sources */,
 				04F44B6E1EAFBD0700194FE4 /* CBContact.m in Sources */,
+				046F01511EB26FC6002F3514 /* CBVKContactService.m in Sources */,
+				046F014E1EB25ABB002F3514 /* CBAuthToken.m in Sources */,
+				046F014A1EB25A56002F3514 /* CBAutorizationController.m in Sources */,
 				04F44B681EAFBCBD00194FE4 /* CBContactsTableViewController.m in Sources */,
 				04F44B6B1EAFBCEF00194FE4 /* CBContactsList.m in Sources */,
 				04F44B4A1EAFAFBE00194FE4 /* main.m in Sources */,
@@ -395,6 +445,7 @@
 				04F44B5E1EAFAFBE00194FE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
